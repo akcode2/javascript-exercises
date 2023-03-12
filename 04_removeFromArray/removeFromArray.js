@@ -32,6 +32,7 @@ const removeFromArray = function(array, ...args) {
     // return newArray;
 
     // Lastly, a solution using .filter()
+    // Filter out any element not in the args array into an array called result
     const result = array.filter((element) => !args.includes(element));
     return result;
 };
