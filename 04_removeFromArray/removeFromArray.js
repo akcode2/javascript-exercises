@@ -19,15 +19,21 @@ const removeFromArray = function(array, ...args) {
     // return array;
     
     // Another solution pushing elements into a new array
-    const newArray = [];
+    // const newArray = [];
 
-    array.forEach(element => {
-        if (!args.includes(element)) {
-            newArray.push(element);
-        }
-    })
+    // array.forEach((element) => {
+    //     // Push any element that doesn't need to be removed
+    //     // into the new array
+    //     if (!args.includes(element)) {
+    //         newArray.push(element);
+    //     };
+    // });
 
-    return newArray;
+    // return newArray;
+
+    // Lastly, a solution using .filter()
+    const result = array.filter((element) => !args.includes(element));
+    return result;
 };
 
 // Do not edit below this line
